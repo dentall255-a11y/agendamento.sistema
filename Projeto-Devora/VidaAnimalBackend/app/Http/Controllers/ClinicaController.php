@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
+use Illuminate\Http\Request;
 
 class ClinicaController extends Controller
 {
-    public function credenciamento(): View
+    public function credenciamento()
     {
-        return view('clinicas.credenciamento');
+        return view('credenciamento');
     }
 }

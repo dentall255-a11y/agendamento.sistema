@@ -1,4 +1,3 @@
-<a href="{{ route('clinicas.credenciamento') }}">Credenciamento</a>
 @extends('layouts.app')
 
 @section('title', 'Home')
