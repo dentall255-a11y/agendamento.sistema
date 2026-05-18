@@ -154,9 +154,13 @@ async function saveBook() {
   const url = editingId ? `/books/${editingId}` : '/books';
 
   try {
+    const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
     const response = await fetch(url, {
       method: method,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': token
+      },
       body: JSON.stringify(data)
     });
 
@@ -187,8 +191,12 @@ async function deleteBook(id) {
   if (!confirm('Deseja remover este livro?')) return;
 
   try {
+    const token = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
     const response = await fetch(`/books/${id}`, {
-      method: 'DELETE'
+      method: 'DELETE',
+      headers: {
+        'X-CSRF-TOKEN': token
+      }
     });
 
     if (!response.ok) {
