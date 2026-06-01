@@ -3,6 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+<<<<<<< HEAD
+=======
+use App\Models\Book;
+>>>>>>> 3b7338a (controller inclusa)
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,5 +25,32 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+<<<<<<< HEAD
+=======
+
+        Book::create([
+            'titulo' => 'O Senhor dos Anéis',
+            'autor' => 'J.R.R. Tolkien',
+            'genero' => 'Fantasia',
+            'qtd' => 15,
+            'preco' => 89.90
+        ]);
+
+        Book::create([
+            'titulo' => '1984',
+            'autor' => 'George Orwell',
+            'genero' => 'Ficção Distópica',
+            'qtd' => 8,
+            'preco' => 45.00
+        ]);
+
+        Book::create([
+            'titulo' => 'Dom Casmurro',
+            'autor' => 'Machado de Assis',
+            'genero' => 'Romance',
+            'qtd' => 12,
+            'preco' => 35.90
+        ]);
+>>>>>>> 3b7338a (controller inclusa)
     }
 }
