@@ -14,7 +14,7 @@ class BookController extends Controller
             'data' => Book::all()
         ]);
     }
-
+    
     public function store(Request $request)
     {
         $validated = $request->validate([
